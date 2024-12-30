@@ -11,6 +11,11 @@
         <h3>Tasks Exercise</h3>
         <p>Practice with Vue directives and reactive state</p>
       </RouterLink>
+
+      <RouterLink to="/users" class="exercise-card">
+        <h3>User Management Exercise</h3>
+        <p>Practice with forms and reactive state</p>
+      </RouterLink>
     </div>
   </div>
 </template>

@@ -5,6 +5,7 @@
       <RouterLink to="/" class="nav-link">Home</RouterLink>
       <RouterLink to="/posts" class="nav-link">Posts Exercise</RouterLink>
       <RouterLink to="/tasks" class="nav-link">Tasks Exercise</RouterLink>
+      <RouterLink to="/users" class="nav-link">User Management Exercise</RouterLink>
     </nav>
   </header>
   <main>
