@@ -26,6 +26,11 @@ import { RouterLink } from 'vue-router';
         <h3>Shopping Cart Exercise</h3>
         <p>Practice with computed properties and event handling</p>
       </RouterLink>
+
+      <RouterLink to="/theme" class="exercise-card">
+        <h3>Theme Store Exercise</h3>
+        <p>Practice with global state management</p>
+      </RouterLink>
     </div>
   </div>
 </template>

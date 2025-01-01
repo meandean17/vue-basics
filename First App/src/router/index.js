@@ -4,6 +4,7 @@ import PostsPage from '../views/PostsPage.vue'
 import TasksPage from '../views/TasksPage.vue'
 import UserManagementPage from '../views/UserManagementPage.vue'
 import ShoppingPage from '../views/ShoppingPage.vue'
+import ThemeSettingsPage from '@/views/ThemeSettingsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/cart',
       name: 'cart',
       component: ShoppingPage,
+    },
+    {
+      path: '/theme',
+      name: 'theme',
+      component: ThemeSettingsPage
     }
 
   ]
