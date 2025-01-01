@@ -102,13 +102,13 @@
   - State persistence
 
 #### Week 8: API Integration
-- [ ] HTTP Client Setup
+- [x] HTTP Client Setup
   - Axios installation and configuration
   - API service structure
   - Error handling
   - Request/response interceptors
 
-- [ ] Data Management
+- [x] Data Management
   - Loading states
   - Error states
   - Data caching
