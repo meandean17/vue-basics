@@ -35,7 +35,7 @@
   - Error handling
   - Real-world API examples (PostList component)
 
-- [ ] ES6+ Features
+- [x] ES6+ Features
   - Modules (import/export)
   - Destructuring objects and arrays
   - Spread/rest operators
@@ -64,14 +64,14 @@
 
 ### Phase 2: Component Development
 #### Week 4-5: Advanced Components
-- [ ] Composition API
+- [x] Composition API
   - setup() function
   - ref vs reactive
   - computed properties
   - watchers
   - lifecycle hooks in Composition API
 
-- [ ] Component Communication
+- [x] Component Communication
   - Props deep dive
   - Events and emits
   - Provide/inject
