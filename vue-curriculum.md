@@ -79,7 +79,7 @@
   - Dynamic components
 
 #### Week 6: Routing & Navigation
-- [ ] Vue Router Setup
+- [x] Vue Router Setup
   - Router installation and configuration
   - Route definitions
   - Navigation guards
@@ -89,16 +89,15 @@
 
 ### Phase 3: State Management & API Integration
 #### Week 7: State Management
-- [ ] Pinia Fundamentals
+- [x] Pinia Fundamentals
   - Store setup
   - State management
   - Getters
   - Actions
   - Modules
 
-- [ ] Advanced State Concepts
+- [x] Advanced State Concepts
   - Composing stores
-  - TypeScript integration
   - Testing stores
   - State persistence
 
