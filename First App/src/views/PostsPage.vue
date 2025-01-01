@@ -18,7 +18,7 @@
         <!-- Error State -->
         <div v-else-if="error" class="error">
             {{ error }}
-            <button @click="loadPosts">Try Again</button>
+            <button @click="handleRetry">Try Again</button>
         </div>
 
         <!-- Success State -->
@@ -33,43 +33,28 @@
     </div>
 </template>
 <script setup>
-import {ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
+import { usePostsStore } from '../stores/posts'
+import { storeToRefs } from 'pinia'
 
-// Reactive state using ref
-const posts = ref([])
-const loading = ref(false)
-const error = ref(null)
+const postsStore = usePostsStore()
 
-// Async function to load posts
-const loadPosts = async () => {
-    // Reset states
-    loading.value = true
-    error.value = null
+const { posts, loading, error } = storeToRefs(postsStore)
 
+const handleRetry = async () => {
     try {
-        // Fetch data from API
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
-
-        // Check if response is ok
-        if (!response.ok) {
-            throw new Error('Failed to fetch posts')
-        }
-
-        // Parse JSON and update posts ref
-        const data = await response.json()
-        posts.value = data
+        await postsStore.loadPosts()
     } catch (e) {
-        // Handle any errors
-        error.value = `Error loading posts: ${e.message}`
-    } finally {
-        // Always set loading to false when done
-        loading.value = false
+        console.error('Retry failed: ', e)
     }
 }
 
-// Load posts when component is mounted
-onMounted(() => {
-    loadPosts()
+onMounted(async () => {
+    try {
+        await postsStore.loadPosts()
+    } catch (e) {
+        console.error('Initial load failed: ', e)
+    }
 })
 </script>
 
