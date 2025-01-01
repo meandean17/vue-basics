@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
+
 <template>
   <div class="home">
     <h2>Vue.js Learning Exercises</h2>
@@ -6,7 +11,7 @@
         <h3>Posts Exercise</h3>
         <p>Practice with async/await and API calls</p>
       </RouterLink>
-      
+
       <RouterLink to="/tasks" class="exercise-card">
         <h3>Tasks Exercise</h3>
         <p>Practice with Vue directives and reactive state</p>
@@ -15,6 +20,11 @@
       <RouterLink to="/users" class="exercise-card">
         <h3>User Management Exercise</h3>
         <p>Practice with forms and reactive state</p>
+      </RouterLink>
+
+      <RouterLink to="/cart" class="exercise-card">
+        <h3>Shopping Cart Exercise</h3>
+        <p>Practice with computed properties and event handling</p>
       </RouterLink>
     </div>
   </div>
@@ -44,7 +54,7 @@
 
 .exercise-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
